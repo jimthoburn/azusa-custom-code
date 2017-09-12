@@ -3,7 +3,7 @@
     var timer;
     function check() {
       if (document.getElementById('cms_tools_top')) {
-        var stylesheet = document.querySelector('link[href*="jimthoburn.com"]');
+        var stylesheet = document.querySelector('link[href*="jimthoburn.github.io"]');
         if (stylesheet) stylesheet.parentNode.removeChild(stylesheet);
       }
       clearInterval(timer);
@@ -134,20 +134,20 @@
   document.addEventListener('DOMContentLoaded', function() {
 
     var images = [
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/football.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/band.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/student-body.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/graduates.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/football-2.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/singers.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/avid.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/staff.jpg',
-      //'https://jimthoburn.com/azusa-high-school/custom-header-images/girls-golf.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/singers-2.jpg',
-      //'https://jimthoburn.com/azusa-high-school/custom-header-images/staff-2.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/best-buddies.jpg',
-      //'https://jimthoburn.com/azusa-high-school/custom-header-images/rotc.jpg',
-      'https://jimthoburn.com/azusa-high-school/custom-header-images/students.jpg'
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/football.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/band.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/student-body.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/graduates.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/football-2.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/singers.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/avid.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/staff.jpg',
+      //'https://jimthoburn.github.io/azusa-high-school/custom-header-images/girls-golf.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/singers-2.jpg',
+      //'https://jimthoburn.github.io/azusa-high-school/custom-header-images/staff-2.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/best-buddies.jpg',
+      //'https://jimthoburn.github.io/azusa-high-school/custom-header-images/rotc.jpg',
+      'https://jimthoburn.github.io/azusa-high-school/custom-header-images/students.jpg'
     ];
 
     var cursor = 0;
