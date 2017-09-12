@@ -714,6 +714,11 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }
+  .azusa-home-introduction .video a:hover,
+  .azusa-home-introduction .video a:active,
+  .azusa-home-introduction .video a:focus {
+    opacity: 1;
+  }
   #container_home_header {
     /* SHIM: Offset the content spacing element */
     /*
