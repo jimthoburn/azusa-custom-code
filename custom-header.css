@@ -114,7 +114,10 @@
 
   .azusa-academics #container_header {
     background-image: url(images/four-students.png) !important;
-    background-position: center !important;
+    background-position: bottom !important;
+
+    height: 55vh !important;
+    min-height: 40vw;
   }
 
   .azusa-student-body #container_header {
