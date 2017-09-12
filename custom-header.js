@@ -201,6 +201,7 @@
           header.className += ' video-playing';
           header.innerHTML = template.innerHTML;
           e.preventDefault();
+          if (window.azusa && window.azusa.stopHomeSlideshow) window.azusa.stopHomeSlideshow();
         }
 
       }
