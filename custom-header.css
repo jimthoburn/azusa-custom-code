@@ -814,6 +814,11 @@
   .azusa-home-introduction a:focus {
     text-decoration: underline;
   }
+  .azusa-home-introduction a:hover .avoid-break,
+  .azusa-home-introduction a:active .avoid-break,
+  .azusa-home-introduction a:focus .avoid-break {
+    text-decoration: underline;
+  }
 
   /*
   @media (max-aspect-ratio: 1/1) {
