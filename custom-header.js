@@ -192,7 +192,7 @@
     if (!document.body.addEventListener || !document.body.querySelector || !document.body.classList) return;
 
     document.body.addEventListener('click', function(e) {
-      if (e.target && e.target.nodeName.toLowerCase() === 'a' && e.target.parentNode &&
+      if (e.target && e.target.parentNode &&
         (
           e.target.parentNode.classList.contains('azusa-home-video-link') || 
           (e.target.parentNode.parentNode && e.target.parentNode.parentNode.classList.contains('azusa-home-video-link'))
