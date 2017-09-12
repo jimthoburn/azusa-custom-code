@@ -84,7 +84,7 @@
     z-index: 1;
   }
   #container_home_header::after {
-    background: transparent url(custom-header-images/azusa-border-light.svg) center no-repeat;
+    background-image: url(custom-header-images/azusa-border-light.svg);
   }
 
   .azusa-band #container_header {
