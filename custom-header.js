@@ -109,7 +109,7 @@
         return 'college';
       } else if (titleHas('Welcome')) {
         return 'graduates';
-      } else if (titleHas('Career', 'Baccalaureate')) {
+      } else if (titleHas('Career', 'Curriculum', 'Course', 'Math', 'Science', 'Education', 'Language', 'Art', 'Baccalaureate')) {
         return 'academics';
       } else if (titleHas('Attendance')) {
         return 'campus';
