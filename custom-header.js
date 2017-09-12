@@ -174,4 +174,25 @@
     timer = setTimeout(preloadNext, 7000);
   });
 
+  // Replace the placeholder image with a video element, if the link to the video has been pressed
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Do we have the features we need?
+    if (!document.body.addEventListener || !document.body.querySelector) return;
+
+    document.body.addEventListener('click', function(e) {
+      if (e.target && e.target.parentNode.getAttribute('class').indexOf('azusa-home-video-link') >= 0) {
+
+        var header   = document.querySelector('.azusa-home-introduction');
+        var template = document.getElementById('azusa-home-video-template');
+
+        if (header && template) {
+          header.className += ' video-playing';
+          header.innerHTML = template.innerHTML;
+          e.preventDefault();
+        }
+
+      }
+    }, false);
+  });
 
