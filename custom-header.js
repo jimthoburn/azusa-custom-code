@@ -192,7 +192,7 @@
     if (!document.body.addEventListener || !document.body.querySelector) return;
 
     document.body.addEventListener('click', function(e) {
-      if (e.target && e.target.parentNode.getAttribute('class').indexOf('azusa-home-video-link') >= 0) {
+      if (e.target && (e.target.parentNode.getAttribute('class').indexOf('azusa-home-video-link') >= 0 || e.target.parentNode.parentNode.getAttribute('class').indexOf('azusa-home-video-link') >= 0)) {
 
         var header   = document.querySelector('.azusa-home-introduction');
         var template = document.getElementById('azusa-home-video-template');
