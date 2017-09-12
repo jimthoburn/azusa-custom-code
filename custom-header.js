@@ -158,7 +158,10 @@
     var imageListener = preloader.addEventListener('load', update);
 
     var timer;
+    var stopped = false;
     function update() {
+      if (stopped) return;
+
       image.setAttribute('style', 'background-image: url(' + images[cursor] + ') !important');
 
       if (timer) clearTimeout(timer);
@@ -166,12 +169,20 @@
     }
 
     function preloadNext() {
+      if (stopped) return;
+
       cursor++;
       if (cursor >= images.length) cursor = 0;
       preloader.src = images[cursor];
     }
 
     timer = setTimeout(preloadNext, 7000);
+
+    window.azusa = window.azusa || {};
+    window.azusa.stopHomeSlideshow = function() {
+      if (timer) clearTimeout(timer);
+      stopped = true;
+    }
   });
 
   // Replace the placeholder image with a video element, if the link to the video has been pressed
