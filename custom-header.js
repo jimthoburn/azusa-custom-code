@@ -189,10 +189,15 @@
   document.addEventListener('DOMContentLoaded', function() {
 
     // Do we have the features we need?
-    if (!document.body.addEventListener || !document.body.querySelector) return;
+    if (!document.body.addEventListener || !document.body.querySelector || !document.body.classList) return;
 
     document.body.addEventListener('click', function(e) {
-      if (e.target && (e.target.parentNode.getAttribute('class').indexOf('azusa-home-video-link') >= 0 || e.target.parentNode.parentNode.getAttribute('class').indexOf('azusa-home-video-link') >= 0)) {
+      if (e.target && e.target.nodeName.toLowerCase() === 'a' && e.target.parentNode &&
+        (
+          e.target.parentNode.classList.contains('azusa-home-video-link') || 
+          (e.target.parentNode.parentNode && e.target.parentNode.parentNode.classList.contains('azusa-home-video-link'))
+        )
+      ) {
 
         var header   = document.querySelector('.azusa-home-introduction');
         var template = document.getElementById('azusa-home-video-template');
