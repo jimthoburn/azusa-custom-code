@@ -1,0 +1,177 @@
+
+  (function() {
+    var timer;
+    function check() {
+      if (document.getElementById('cms_tools_top')) {
+        var stylesheet = document.querySelector('link[href*="jimthoburn.com"]');
+        if (stylesheet) stylesheet.parentNode.removeChild(stylesheet);
+      }
+      clearInterval(timer);
+    }
+    timer = setInterval(check, 10);
+    document.addEventListener('DOMContentLoaded', function() {
+      check();
+      clearInterval(timer);
+    });
+  })();
+
+  (function() {
+    if (window.location.host === 'ahs-ausd-ca.schoolloop.com' && document.head) {
+
+      //var canonicalURL = 'http://www.azusahighschool.net' + window.location.pathname + window.location.search + window.location.hash;
+
+      var canonicalURL = location.href.replace('ahs-ausd-ca.schoolloop.com', 'www.azusahighschool.net');
+
+      // Add a rel canonical
+      var link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', canonicalURL);
+      document.head.appendChild(link);
+
+      document.addEventListener('DOMContentLoaded', function() {
+
+        function signedOut() {
+          var footer = document.getElementById('container_footer');
+          if (footer && footer.querySelector) {
+            var button = footer.querySelector('.footer_login .button1');
+            if (button && button.textContent === 'Staff Login') {
+              return true;
+            }
+          }
+
+          return false;
+        }
+
+        // If the domain name is not www.azusahighschool.net
+        // Redirect to www.azusahighschool.net
+        if (signedOut()) {
+          var meta = document.createElement('meta');
+          meta.setAttribute('http-equiv', 'refresh');
+          meta.setAttribute('content', '0; url=' + canonicalURL);
+          document.head.appendChild(meta);
+        }
+      });
+    }
+  })();
+
+  // Wait for the page to load, and update the HTML.
+  document.addEventListener('DOMContentLoaded', function() {
+    var title = document.getElementById('page_title')
+    if (!title) return;
+
+    title = title.textContent;
+
+    function titleHas() {
+      for (var index = 0; index < arguments.length; index++) {
+        if (title.indexOf(arguments[index]) >= 0) return true;
+      }
+      return false;
+    }
+
+    function getPageCategory(className) {
+      if (titleHas('Singers')) {
+        return 'singers';
+      } else if (titleHas('Girls Golf')) {
+        return 'girls-golf';
+      /*
+      } else if (titleHas('Girls Tennis')) {
+        return 'girls-tennis';
+      */
+      } else if (titleHas('Band')) {
+        return 'band';
+      } else if (titleHas(
+                  'Index',
+                  'Athletic',
+                  'Roster',
+                  'Sport',
+                  'Cheerleading',
+                  'Cross Country',
+                  'Tennis',
+                  'Golf',
+                  'Basketball',
+                  'Soccer',
+                  'Softball',
+                  'Volleyball',
+                  'Wrestling',
+                  'Baseball',
+                  'Track'
+                )) {
+        return 'athletics';
+      /*
+      } else if (titleHas('ASB')) {
+        return 'student-body';
+      */
+      } else if (titleHas('Football')) {
+        return 'football';
+      } else if (titleHas('ROTC')) {
+        return 'rotc';
+      } else if (titleHas('College', 'Guidance', 'Requirements')) {
+        return 'college';
+      } else if (titleHas('Welcome')) {
+        return 'graduates';
+      } else if (titleHas('Career', 'Baccalaureate')) {
+        return 'academics';
+      } else if (titleHas('Attendance')) {
+        return 'campus';
+      } else if (titleHas('Directory')) {
+        return 'staff';
+      } else {
+        return 'students';
+      }
+    }
+
+    var category = getPageCategory();
+    if (category) document.body.classList.add('azusa-' + getPageCategory());
+
+    // Get a reference to the header element
+    // Update the HTML
+
+    // Get a reference to the footer element
+    // Update the HTML
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var images = [
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/football.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/band.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/student-body.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/graduates.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/football-2.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/singers.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/avid.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/staff.jpg',
+      //'https://jimthoburn.com/azusa-high-school/custom-header-images/girls-golf.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/singers-2.jpg',
+      //'https://jimthoburn.com/azusa-high-school/custom-header-images/staff-2.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/best-buddies.jpg',
+      //'https://jimthoburn.com/azusa-high-school/custom-header-images/rotc.jpg',
+      'https://jimthoburn.com/azusa-high-school/custom-header-images/students.jpg'
+    ];
+
+    var cursor = 0;
+    var image = document.getElementById('container_home_header');
+    if (!image) return;
+
+    var preloader = new Image();
+    var imageListener = preloader.addEventListener('load', update);
+
+    var timer;
+    function update() {
+      image.setAttribute('style', 'background-image: url(' + images[cursor] + ') !important');
+
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(preloadNext, 7000);
+    }
+
+    function preloadNext() {
+      cursor++;
+      if (cursor >= images.length) cursor = 0;
+      preloader.src = images[cursor];
+    }
+
+    timer = setTimeout(preloadNext, 7000);
+  });
+
+
