@@ -27,7 +27,7 @@
   #container_home_header,
   #container_header {
     /*
-    background-image: url(custom-header-images/four-students.png), linear-gradient(#dcdede, #fafafa) !important;
+    background-image: url(images/four-students.png), linear-gradient(#dcdede, #fafafa) !important;
     background-position: 3em calc(100% - 3em), bottom, top !important;
     background-size: 200px auto, contain, auto !important;
     background-repeat: no-repeat, no-repeat, repeat !important;
@@ -42,7 +42,7 @@
   /*
   #container_home_header {
     bacground-color: rgb(237, 237, 239);
-    background-image: url(custom-header-images/azusa.svg), none, linear-gradient(rgb(237, 237, 239), rgb(237, 237, 239)) !important;
+    background-image: url(images/azusa.svg), none, linear-gradient(rgb(237, 237, 239), rgb(237, 237, 239)) !important;
     background-position: center, bottom, top !important;
     background-size: 20vmax auto, contain, auto !important;
     background-repeat: no-repeat, no-repeat, repeat !important;
@@ -59,11 +59,11 @@
     background-size: cover !important;
   }
   #container_home_header {
-    background-image: url(custom-header-images/students.jpg) !important;
+    background-image: url(images/students.jpg) !important;
   }
   .azusa-students #container_home_header,
   .azusa-students #container_header {
-    background-image: url(custom-header-images/students.jpg) !important;
+    background-image: url(images/students.jpg) !important;
     background-position: bottom !important;
     background-size: cover !important;
   }
@@ -73,7 +73,7 @@
     width: 150px;
     height: 120px;
     position: absolute;
-    background: transparent url(custom-header-images/azusa-border.svg) center no-repeat;
+    background: transparent url(images/azusa-border.svg) center no-repeat;
     background-size: contain;
     bottom: 1.5em;
     left: 1.5em;
@@ -84,64 +84,64 @@
     z-index: 1;
   }
   #container_home_header::after {
-    background-image: url(custom-header-images/azusa-border-light.svg);
+    background-image: url(images/azusa-border-light.svg);
   }
 
   .azusa-band #container_header {
-    background-image: url(custom-header-images/band.jpg) !important;
+    background-image: url(images/band.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-singers #container_header {
-    background-image: url(custom-header-images/singers.jpg) !important;
+    background-image: url(images/singers.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-graduates #container_header {
-    background-image: url(custom-header-images/graduates.jpg) !important;
+    background-image: url(images/graduates.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-athletics #container_header {
-    background-image: url(custom-header-images/athletics.jpg) !important;
+    background-image: url(images/athletics.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-football #container_header {
-    background-image: url(custom-header-images/football.jpg) !important;
+    background-image: url(images/football.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-academics #container_header {
-    background-image: url(custom-header-images/avid.jpg) !important;
+    background-image: url(images/avid.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-student-body #container_header {
-    background-image: url(custom-header-images/student-body.jpg) !important;
+    background-image: url(images/student-body.jpg) !important;
     background-position: center !important;
   }
 
   .azusa-girls-golf #container_header {
-    background-image: url(custom-header-images/girls-golf.jpg) !important;
+    background-image: url(images/girls-golf.jpg) !important;
     background-position: 50% 25% !important;
   }
 
   /*
   .azusa-girls-tennis #container_header {
-    background-image: url(custom-header-images/girls-tennis.jpg) !important;
+    background-image: url(images/girls-tennis.jpg) !important;
     background-position: 1.5em calc(100% - 1.5em), 50% 75%, bottom !important;
   }
   */
 
   /*
   .azusa-life #container_header {
-    background-image: url(custom-header-images/best-buddies.jpg) !important;
+    background-image: url(images/best-buddies.jpg) !important;
   }
   */
 
   .azusa-college #container_header {
-    background-image: url(custom-header-images/college.jpg) !important;
+    background-image: url(images/college.jpg) !important;
     background-position: center !important;
 
     height: 55vh !important;
@@ -149,17 +149,17 @@
   }
 
   .azusa-rotc #container_header {
-    background-image: url(custom-header-images/rotc.jpg) !important;
+    background-image: url(images/rotc.jpg) !important;
     background-position: 50% 25% !important;
   }
 
   .azusa-campus #container_header {
-    background-image: url(custom-header-images/campus.jpg) !important;
+    background-image: url(images/campus.jpg) !important;
     background-position: bottom !important;
   }
 
   .azusa-staff #container_header {
-    background-image: url(custom-header-images/staff.jpg) !important;
+    background-image: url(images/staff.jpg) !important;
     background-position: 50% 40% !important;
   }
 
@@ -191,7 +191,7 @@
   }
 
   .nav_public {
-    background-image: url(custom-header-images/aztec-pattern.png) !important;
+    background-image: url(images/aztec-pattern.png) !important;
     background-position: bottom !important;
     background-size: auto 1.25em !important;
     background-repeat: repeat-x !important;
@@ -645,7 +645,7 @@
   .azusa-home-introduction {
     /*
     background-color: rgb(237, 237, 239);
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent), url(custom-header-images/four-students.png);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent), url(images/four-students.png);
     background-size: cover, auto 100%;
     background-repeat: no-repeat;
     background-position: bottom;
