@@ -835,3 +835,8 @@
   }
   */
 
+  iframe.azusa-google-calendar {
+    width: 100%;
+    height: 75vh;
+  }
+
