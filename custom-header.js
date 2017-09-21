@@ -45,6 +45,18 @@
         // If the domain name is not www.azusahighschool.net
         // Redirect to www.azusahighschool.net
         if (signedOut()) {
+
+          // KUDOS: https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage
+          if (window.location && window.location.replace) {
+
+            // similar behavior as an HTTP redirect
+            window.location.replace(canonicalURL);
+          } else {
+
+            // similar behavior as clicking on a link
+            window.location.href = canonicalURL;
+          }
+
           var meta = document.createElement('meta');
           meta.setAttribute('http-equiv', 'refresh');
           meta.setAttribute('content', '0; url=' + canonicalURL);
