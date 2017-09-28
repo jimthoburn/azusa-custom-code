@@ -329,7 +329,7 @@
   }
 
   #page_title {
-    margin-top: 0.75em;
+    padding-top: 0.75em;
     font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 300;
     text-transform: uppercase;
