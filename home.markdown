@@ -1,5 +1,5 @@
 ---
-title: Academics
+title: Home
 position: 1
 images:
 - "/uploads/singers.jpg"
