@@ -1,7 +1,7 @@
 ---
 title: Academics
 images:
-  - "/uploads/singers.jpg"
-  - "/uploads/football.jpg"
+- "/uploads/singers.jpg"
+- "/uploads/football.jpg"
 ---
 
