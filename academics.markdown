@@ -1,6 +1,6 @@
 ---
 title: Academics
-position: 0
+position: 1
 image: "/uploads/academics.jpg"
 ---
 
