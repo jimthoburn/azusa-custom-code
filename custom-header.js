@@ -1,4 +1,5 @@
 
+  // Remove the custom style sheet, if the user is signed in
   (function() {
     var timer;
     function check() {
@@ -15,6 +16,8 @@
     });
   })();
 
+
+  // Add a canonical URL and redirect to www.azusahighschool.net
   (function() {
     if (window.location.host === 'ahs-ausd-ca.schoolloop.com' && document.head) {
 
@@ -28,6 +31,7 @@
       link.setAttribute('href', canonicalURL);
       document.head.appendChild(link);
 
+      /*
       document.addEventListener('DOMContentLoaded', function() {
 
         function signedOut() {
@@ -63,6 +67,7 @@
           document.head.appendChild(meta);
         }
       });
+      */
     }
   })();
 
@@ -143,6 +148,7 @@
   });
 
 
+  // Add a slideshow on the home page
   document.addEventListener('DOMContentLoaded', function() {
 
     var images = [
