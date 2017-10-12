@@ -312,6 +312,7 @@
   .block_content_main h2,
   .block_content_left h2,
   .block_content_right h2 {
+    font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     text-transform: inherit;
     background-image: none;
     color: rgb(0, 174, 239); /* --light-blue */
