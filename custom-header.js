@@ -31,7 +31,6 @@
       link.setAttribute('href', canonicalURL);
       document.head.appendChild(link);
 
-      /*
       document.addEventListener('DOMContentLoaded', function() {
 
         function signedOut() {
@@ -67,7 +66,6 @@
           document.head.appendChild(meta);
         }
       });
-      */
     }
   })();
 
