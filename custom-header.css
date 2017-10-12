@@ -301,7 +301,6 @@
   }
 
   h2 {
-    text-transform: uppercase;
     font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     color: rgb(0, 174, 239); /* --light-blue */
   }
@@ -327,7 +326,6 @@
   #page_title {
     padding-top: 0.75em;
     font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-    text-transform: uppercase;
     background-image: none;
     color: rgb(0, 174, 239); /* --light-blue */
     padding-left: 25px;
@@ -772,7 +770,6 @@
     padding-left: 2.5vw;
     padding-right: 2.5vw;
     line-height: 1.125;
-    text-transform: uppercase;
     max-width: 14em;
     margin-left: auto;
     margin-right: auto;
