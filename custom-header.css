@@ -335,7 +335,6 @@
     font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     background-image: none;
     color: rgb(0, 174, 239); /* --light-blue */
-    color: inherit;
     padding-left: 25px;
     font-size: 2em;
     line-height: 1.125;
