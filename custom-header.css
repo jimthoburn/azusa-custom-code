@@ -301,6 +301,8 @@
   }
 
   h2 {
+    font-weight: bold;
+    text-transform: inherit;
     font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     color: rgb(0, 174, 239); /* --light-blue */
   }
