@@ -302,7 +302,7 @@
 
   h2 {
     text-transform: uppercase;
-    font-family: Cardo, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     color: rgb(0, 174, 239); /* --light-blue */
   }
 
@@ -326,7 +326,7 @@
 
   #page_title {
     padding-top: 0.75em;
-    font-family: Cardo, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     text-transform: uppercase;
     background-image: none;
     color: rgb(0, 174, 239); /* --light-blue */
@@ -424,7 +424,7 @@
   #container_home_header h2 {
     margin-top: 0.75em;
 
-    font-family: Cardo, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
 
     line-height: 1.5;
     font-size: inherit;
@@ -767,7 +767,7 @@
   }
   .azusa-home-introduction h3 {
     text-align: center;
-    font-family: Cardo, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 5vw;
     padding-left: 2.5vw;
     padding-right: 2.5vw;
