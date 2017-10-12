@@ -307,6 +307,7 @@
     text-transform: inherit;
     font-family: Merriweather, "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     color: rgb(0, 174, 239); /* --light-blue */
+    color: inherit;
   }
 
   .link_list h2,
@@ -320,6 +321,7 @@
     text-transform: inherit;
     background-image: none;
     color: rgb(0, 174, 239); /* --light-blue */
+    color: inherit;
     padding-left: 0;
     border-color: rgb(212, 212, 212);
   }
