@@ -2,16 +2,18 @@
 title: Azusa High School, Custom Code
 timezone: America/Los_Angeles
 collections:
+  posts:
+    title: Posts
+    output: true
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    image: 
 permalink: pretty
 exclude:
 - README.md
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      image:
