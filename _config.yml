@@ -2,49 +2,16 @@
 title: Azusa High School, Custom Code
 timezone: America/Los_Angeles
 collections:
-  posts:
-    title: Posts
-    output: true
   uploads:
     title: Uploads
     output: true
 permalink: pretty
 exclude:
 - README.md
-images:
-- Singers: "/images/singers.jpg"
-- Girls Golf: "/images/girls-golf.jpg"
-- Band: "/images/band.jpg"
-- Index: "/images/athletics.jpg"
-- Athletic: "/images/athletics.jpg"
-- Roster: "/images/athletics.jpg"
-- Sport: "/images/athletics.jpg"
-- Cheerleading: "/images/athletics.jpg"
-- Cross Country: "/images/athletics.jpg"
-- Tennis: "/images/athletics.jpg"
-- Golf: "/images/athletics.jpg"
-- Basketball: "/images/athletics.jpg"
-- Soccer: "/images/athletics.jpg"
-- Softball: "/images/athletics.jpg"
-- Volleyball: "/images/athletics.jpg"
-- Wrestling: "/images/athletics.jpg"
-- Baseball: "/images/athletics.jpg"
-- Track: "/images/athletics.jpg"
-- ASB: "/images/student-body.jpg"
-- Football: "/images/football.jpg"
-- ROTC: "/images/rotc.jpg"
-- College: "/images/college.jpg"
-- Guidance: "/images/college.jpg"
-- Requirements: "/images/college.jpg"
-- Welcome: "/images/graduates.jpg"
-- Career: "/images/academics.jpg"
-- Curriculum: "/images/academics.jpg"
-- Course: "/images/academics.jpg"
-- Math: "/images/academics.jpg"
-- Science: "/images/academics.jpg"
-- Education: "/images/academics.jpg"
-- Language: "/images/academics.jpg"
-- Art: "/images/academics.jpg"
-- Baccalaureate: "/images/academics.jpg"
-- Attendance: "/images/campus.jpg"
-- Directory: "/images/staff.jpg"
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      image:
