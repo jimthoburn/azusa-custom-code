@@ -120,8 +120,6 @@
         return 'academics';
       } else if (titleHas('Attendance')) {
         return 'campus';
-      } else if (titleHas('Directory')) {
-        return 'staff';
       } else {
         return 'students';
       }
