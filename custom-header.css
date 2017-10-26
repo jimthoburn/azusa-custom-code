@@ -87,11 +87,6 @@
     background-image: url(images/azusa-border-light.svg);
   }
 
-  .azusa-band #container_header {
-    background-image: url(images/band.jpg) !important;
-    background-position: center !important;
-  }
-
   .azusa-singers #container_header {
     background-image: url(images/singers-3.jpg) !important;
     background-position: center !important;
@@ -124,12 +119,6 @@
     background-image: url(images/student-body.jpg) !important;
     background-position: center !important;
   }
-
-  .azusa-girls-golf #container_header {
-    background-image: url(images/girls-golf.jpg) !important;
-    background-position: 50% 25% !important;
-  }
-
   /*
   .azusa-girls-tennis #container_header {
     background-image: url(images/girls-tennis.jpg) !important;

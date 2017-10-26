@@ -86,14 +86,6 @@
     function getPageCategory(className) {
       if (titleHas('Singers')) {
         return 'singers';
-      } else if (titleHas('Girls Golf')) {
-        return 'girls-golf';
-      /*
-      } else if (titleHas('Girls Tennis')) {
-        return 'girls-tennis';
-      */
-      } else if (titleHas('Band')) {
-        return 'band';
       } else if (titleHas(
                   'Index',
                   'Athletic',
@@ -151,18 +143,12 @@
 
     var images = [
       'https://jimthoburn.github.io/azusa-custom-code/images/football.jpg',
-      'https://jimthoburn.github.io/azusa-custom-code/images/band.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/student-body.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/graduates.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/football-2.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/singers.jpg',
-      'https://jimthoburn.github.io/azusa-custom-code/images/avid.jpg',
-      'https://jimthoburn.github.io/azusa-custom-code/images/staff.jpg',
-      //'https://jimthoburn.github.io/azusa-custom-code/images/girls-golf.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/singers-2.jpg',
-      //'https://jimthoburn.github.io/azusa-custom-code/images/staff-2.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/best-buddies.jpg',
-      //'https://jimthoburn.github.io/azusa-custom-code/images/rotc.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/students.jpg'
     ];
 
