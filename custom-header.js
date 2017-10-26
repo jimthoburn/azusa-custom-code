@@ -104,10 +104,6 @@
                   'Track'
                 )) {
         return 'athletics';
-      /*
-      } else if (titleHas('ASB')) {
-        return 'student-body';
-      */
       } else if (titleHas('Football')) {
         return 'football';
       } else if (titleHas('ROTC')) {
@@ -141,7 +137,6 @@
 
     var images = [
       'https://jimthoburn.github.io/azusa-custom-code/images/football.jpg',
-      'https://jimthoburn.github.io/azusa-custom-code/images/student-body.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/graduates.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/football-2.jpg',
       'https://jimthoburn.github.io/azusa-custom-code/images/singers.jpg',

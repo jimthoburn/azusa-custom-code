@@ -115,10 +115,6 @@
     min-height: 40vw;
   }
 
-  .azusa-student-body #container_header {
-    background-image: url(images/student-body.jpg) !important;
-    background-position: center !important;
-  }
   /*
   .azusa-girls-tennis #container_header {
     background-image: url(images/girls-tennis.jpg) !important;
