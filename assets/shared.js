@@ -1,9 +1,12 @@
 
-  // Remove the custom style sheet, if the user is signed in
+  // Remove the custom style sheet, if the user is signed in to the content management system
   (function() {
     var timer;
     function check() {
-      if (document.getElementById('cms_tools_top')) {
+
+      // SHIM: This is the best test we could come up with. This does not feel reliable.
+      if (document.getElementById('cms_tools_top') || document.querySelector('meta[name="robots"][content="noindex"]')) {
+
         var stylesheet = document.querySelector('link[href*="jimthoburn.github.io"]');
         if (stylesheet) stylesheet.parentNode.removeChild(stylesheet);
         clearInterval(timer);
