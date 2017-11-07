@@ -6,8 +6,8 @@
       if (document.getElementById('cms_tools_top')) {
         var stylesheet = document.querySelector('link[href*="jimthoburn.github.io"]');
         if (stylesheet) stylesheet.parentNode.removeChild(stylesheet);
+        clearInterval(timer);
       }
-      clearInterval(timer);
     }
     timer = setInterval(check, 10);
     document.addEventListener('DOMContentLoaded', function() {
