@@ -845,6 +845,16 @@
       min-height: 55vw;
     }
 
+    .azusa-academics #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type,
+    .azusa-academics #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type,
+    .azusa-academics #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type,
+    .azusa-college   #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type,
+    .azusa-college   #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type,
+    .azusa-college   #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type {
+      height: 55vh !important;
+      min-height: 40vw;
+    }
+
     #container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type + .content_spacing,
     #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type + .content_spacing,
     #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type + .content_spacing,
