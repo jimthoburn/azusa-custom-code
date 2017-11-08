@@ -855,6 +855,13 @@
       min-height: 40vw;
     }
 
+    /* OPTIONAL: Adjust position of any images with the caption “student leadership” (students.jpg) */
+    #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[alt*="student leadership"][width="350"]:first-of-type,
+    #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[alt*="student leadership"][width="465"]:first-of-type,
+    #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[alt*="student leadership"][width="700"]:first-of-type {
+      object-position: bottom;
+    }
+
     #container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type + .content_spacing,
     #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type + .content_spacing,
     #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type + .content_spacing,

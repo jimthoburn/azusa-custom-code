@@ -1,6 +1,8 @@
 
   // Remove the custom style sheet, if the user is signed in to the content management system
   (function() {
+    if (!document.querySelector) return;
+
     var timer;
     function check() {
 
@@ -12,11 +14,24 @@
         clearInterval(timer);
       }
     }
+
+    // Check frequently
     timer = setInterval(check, 10);
+
+    // Check one last time when the DOM has loaded
     document.addEventListener('DOMContentLoaded', function() {
       check();
       clearInterval(timer);
     });
+    // Stop checking when everything has loaded
+    document.addEventListener('load', function() {
+      clearInterval(timer);
+    });
+
+    // If all else fails, stop checking after five seconds
+    setTimeout(function() {
+      clearInterval(timer);
+    }, 5000);
   })();
 
 
