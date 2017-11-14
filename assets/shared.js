@@ -56,10 +56,47 @@
                   replace('w350', 'w2000').
                   replace('w465', 'w2000').
                   replace('w700', 'w2000').
-                  replace('w970', 'w2000')
+                  replace('w970', 'w2000');
 
       image.setAttribute('src', url);
-    }        
+    }
+  });
+
+
+  // OPTIONAL: Increase the resolution of all of the images at the beginning of the home page, and turn them into a slide show
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // These selectors were taken directly from the style sheet, “custom.css”
+    var images = document.querySelectorAll(
+      '#container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]'
+    );
+
+    // If there’s only one image, stop here
+    if (images.length <= 1) return;
+
+
+    var nextImage;
+    var nextURL;
+    for (var index = 0; index < images.length; index++) {
+      nextImage = images[index]
+      nextURL = nextImage.getAttribute('src').replace('w970', 'w2000');
+
+      nextImage.setAttribute('src', nextURL);
+      if (index !== 0) nextImage.style.opacity = 0;
+    }
+
+    var currentIndex = 0;
+    function showNext() {
+      images[currentIndex].style.opacity = 0;
+
+      currentIndex++;
+      if (currentIndex >= images.length) currentIndex = 0;
+
+      images[currentIndex].style.opacity = 1;
+    }
+
+    var timer;
+    timer = setInterval(showNext, 7000);
   });
 
 
