@@ -58,12 +58,16 @@
     background-position: bottom !important;
     background-size: cover !important;
   }
+  /*
   #container_home_header {
     background-image: url(../images/students.jpg) !important;
   }
+  */
   .azusa-students #container_home_header,
   .azusa-students #container_header {
+    /*
     background-image: url(../images/students.jpg) !important;
+    */
     background-position: bottom !important;
     background-size: cover !important;
   }
@@ -87,6 +91,7 @@
     background-image: url(../images/azusa-border-light.svg);
   }
 
+  /*
   .azusa-singers #container_header {
     background-image: url(../images/singers-3.jpg) !important;
     background-position: center !important;
@@ -114,6 +119,7 @@
     height: 55vh !important;
     min-height: 40vw;
   }
+  */
 
   /*
   .azusa-girls-tennis #container_header {
@@ -128,6 +134,7 @@
   }
   */
 
+  /*
   .azusa-college #container_header {
     background-image: url(../images/college.jpg) !important;
     background-position: center !important;
@@ -150,18 +157,7 @@
     background-image: url(../images/staff.jpg) !important;
     background-position: 50% 40% !important;
   }
-
-  @media (false) and (max-aspect-ratio: 1/1) {
-    /*
-    background-size: 200px auto, auto 80%, auto !important;
-    */
-
-    #container_home_header,
-    #container_header {
-      height: 35vh !important;
-      min-height: unset;
-    }
-  }
+  */
 
   #container_header h2,
   #container_home_header h2 {
@@ -184,12 +180,13 @@
     background-size: auto 1.25em !important;
     background-repeat: repeat-x !important;
     padding-bottom: 1.25em;
+    z-index: 3;
   }
 
   /* Position the navigation at the top */
   .nav_public {
     position: absolute;
-    top: -4.25em;
+    top: 0em;
     left: 0;
     width: 100%;
     box-sizing: border-box;
@@ -197,7 +194,7 @@
 
   #container_home_header,
   #container_header {
-    margin-top: 4.25em;
+    margin-top: 3em;
   }
 
   /*
@@ -658,6 +655,10 @@
     align-content: center;
     align-items: center;
     padding-bottom: 3em;
+
+    top: 3em;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
   }
   .azusa-home-introduction iframe {
     position: absolute;
@@ -725,7 +726,7 @@
   }
   #container_home_header,
   .azusa-home-introduction {
-    height: 70vh !important;
+    height: 85vh !important;
     min-height: 55vw;
   }
   #container_home_header {
@@ -738,6 +739,7 @@
     width: 18.75vw;
     height: 15vw;
     transform: translateX(-50%);
+    z-index: 2;
   }
   @media (max-aspect-ratio: 1/1) {
     #container_home_header::after {
@@ -823,8 +825,6 @@
   }
 
 
-
-
   /* If the client supports object fit,  position it above the default banner image and crop it using object fit and height */
   @supports (object-fit: cover) {
     #container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type,
@@ -832,7 +832,7 @@
     #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type,
     #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type {
       position: absolute;
-      top: 0;
+      top: 3em;
       left: 0;
       width: 100%;
       height: 350px !important;
@@ -843,23 +843,6 @@
     #container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type {
       height: 85vh !important;
       min-height: 55vw;
-    }
-
-    .azusa-academics #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type,
-    .azusa-academics #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type,
-    .azusa-academics #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type,
-    .azusa-college   #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type,
-    .azusa-college   #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type,
-    .azusa-college   #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type {
-      height: 55vh !important;
-      min-height: 40vw;
-    }
-
-    /* OPTIONAL: Adjust position of any images with the caption “student leadership” (students.jpg) */
-    #page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[alt*="student leadership"][width="350"]:first-of-type,
-    #page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[alt*="student leadership"][width="465"]:first-of-type,
-    #page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[alt*="student leadership"][width="700"]:first-of-type {
-      object-position: bottom;
     }
 
     #container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type + .content_spacing,
@@ -880,8 +863,3 @@
       }
     }
   }
-
-
-
-
-
