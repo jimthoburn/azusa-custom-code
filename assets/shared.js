@@ -1,16 +1,13 @@
 
-  // Remove the custom style sheet, if the user is signed in to the content management system
+  // OPTIONAL: Remove the custom style sheet, if the user is signed in
   (function() {
-    if (!document.querySelector) return;
-
     var timer;
     function check() {
-
-      // SHIM: This is the best test we could come up with. This does not feel reliable.
-      if (document.getElementById('cms_tools_top') || document.querySelector('meta[name="robots"][content="noindex"]')) {
-
-        var stylesheet = document.querySelector('link[href*="jimthoburn.github.io"]');
-        if (stylesheet) stylesheet.parentNode.removeChild(stylesheet);
+      if ( document.getElementById('public_site') || document.getElementById('cms_tools_top')) {
+        var stylesheets = document.querySelectorAll('style[data-custom-code]');
+        for (var index = 0; index < stylesheets.length; index++) {
+          stylesheets[index].parentNode.removeChild(stylesheets[index]);
+        }
         clearInterval(timer);
       }
     }
