@@ -863,3 +863,10 @@
       }
     }
   }
+
+  .azusa-no-header-image #container_header,
+  .azusa-no-header-image #container_home_header {
+    height: 200px !important;
+    min-height: 0;
+    background: white;
+  }

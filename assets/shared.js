@@ -36,31 +36,86 @@
 
 
   // OPTIONAL: Increase the resolution of the image in the header, by changing its “src” attribute
-  document.addEventListener('DOMContentLoaded', function() {
-    // Check to see if the page HTML matches a certain pattern (the HTML that we expect to see on School Loop 1.0)
-    // If it does match, look for an image that appears right after the main headline
-    // If that image is found, update it’s URL from wXXX to w2000
+  (function() {
+    if (!document.querySelector) return;
 
-    // These selectors were taken directly from the style sheet, “custom.css”
-    var image = document.querySelector(
-      '#container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type'
-      + ', ' +
-      '#page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type'
-      + ', ' +
-      '#page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type'
-      + ', ' +
-      '#page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type'
-    );
-    if (image) {
-      var url = image.getAttribute('src').
-                  replace('w350', 'w2000').
-                  replace('w465', 'w2000').
-                  replace('w700', 'w2000').
-                  replace('w970', 'w2000');
 
-      image.setAttribute('src', url);
+    function updateImage() {
+      // Check to see if the page HTML matches a certain pattern (the HTML that we expect to see on School Loop 1.0)
+      // If it does match, look for an image that appears right after the main headline
+      // If that image is found, update it’s URL from wXXX to w2000
+
+      // These selectors were taken directly from the style sheet, “custom.css”
+      var image = document.querySelector(
+        '#container_content_home > .content_full > div > div[style="width: 100%; width: 970px"] > img[width="970"]:first-of-type'
+        + ', ' +
+        '#page_title + table > tbody > tr > td > #block_hub_main_b > .block_content_main > div > div[style="width: 100%; width: 350px"] > img[width="350"]:first-of-type'
+        + ', ' +
+        '#page_title + table > tbody > tr > td > #block_hub_main > .block_content_main > div > div[style="width: 100%; width: 465px"] > img[width="465"]:first-of-type'
+        + ', ' +
+        '#page_title + #block_wide_main > .block_content_main > div > div[style="width: 100%; width: 700px"] > img[width="700"]:first-of-type'
+      );
+      if (image) {
+        var url = image.getAttribute('src').
+                    replace('w350', 'w2000').
+                    replace('w465', 'w2000').
+                    replace('w700', 'w2000').
+                    replace('w970', 'w2000');
+
+        image.setAttribute('src', url);
+      } else {
+        // If there’s no image, adjust the height of the header
+        document.body.classList.add('azusa-no-header-image')
+      }
     }
-  });
+
+    // function nextSiblingIsImage(element) {
+    //   var candidate = element.nextSibling;
+    //   var targetNodeType = Node.ELEMENT_NODE;
+    //   while (candidate && candidate.nodeType !== targetNodeType) {
+    //     candidate = candidate.nextSibling;
+    //   }
+    //   if (candidate && candidate.nodeName.toLowerCase() === 'img') return true;
+    // }
+
+    var timer;
+    function check() {
+      var title = document.getElementById('page_title');
+
+      if (title && title.parentNode.nextSibling) {
+        updateImage();
+        clearInterval(timer);
+        timer = undefined;
+      }
+    }
+
+    // Check frequently
+    timer = setInterval(check, 10);
+
+    // Check one last time when the DOM has loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      if (timer) {
+        check()
+        if (timer) clearInterval(timer);
+      }
+    });
+
+    // Stop checking when everything has loaded
+    document.addEventListener('load', function() {
+      if (timer) {
+        check()
+        if (timer) clearInterval(timer);
+      }
+    });
+
+    // If all else fails, stop checking after five seconds
+    setTimeout(function() {
+      if (timer) {
+        check()
+        if (timer) clearInterval(timer);
+      }
+    }, 5000);
+  })();
 
 
   // OPTIONAL: Increase the resolution of all of the images at the beginning of the home page, and turn them into a slide show
